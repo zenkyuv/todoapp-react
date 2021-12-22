@@ -44,20 +44,19 @@ function ToDoList() {
 			<input type="text" ref={textInput} />
 				<button className="submit-button" onClick={addToDo}>Submit</button>
 				<div className="todos-container">{todos.map((todo: any, i: number) => 
-					todo.text === "" ? null
-						: <div key={i} onMouseOver={() => hover(i)} onMouseOut={() => hover(i)}
-							className={todo.checked ? "todo-container checked"
-						: "todo-container"}>
-							<button className="button" onClick={() => checkTodo(i)}>
-							{todo.checked ? "✔" : ""}
-							</button>
-								<div>{todo.text}</div>
-							<button className={todo.hovered ? "remove-button hovered"
-							: "remove-button"} onClick={() => removeTodo(i)}>
-							</button>
-							</div>
+					todo.text === "" ? null :
+					<div key={i} onMouseOver={() => hover(i)} onMouseOut={() => hover(i)}
+						className={todo.checked ? "todo-container checked" : "todo-container"}>
+						<button className="button" onClick={() => checkTodo(i)}>
+						{todo.checked ? "✔" : ""}
+						</button>
+							<div>{todo.text}</div>
+						<button className={todo.hovered ? "remove-button hovered"
+						: "remove-button"} onClick={() => removeTodo(i)}>
+						</button>
+					</div>
 			)}</div>
-			</div>
+		</div>
 	)
 }
 
