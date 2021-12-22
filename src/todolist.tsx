@@ -52,7 +52,7 @@ function ToDoList() {
 							{todo.checked ? "✔" : ""}
 							</button>
 								<div>{todo.text}</div>
-							<button className={todo.hovered === true ? "remove-button hovered"
+							<button className={todo.hovered ? "remove-button hovered"
 							: "remove-button"} onClick={() => removeTodo(i)}>
 							</button>
 							</div>
