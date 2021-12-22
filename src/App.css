@@ -1,0 +1,54 @@
+* {box-sizing:border-box;}
+
+.App {
+	text-align: center;
+}
+
+.input {
+	width: 50%;
+	height: 50px;
+	font-size: 30px;
+}
+
+.todos-container {
+	width: 500px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.todo-container {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	margin: auto;
+	border: 1px solid black;
+	position: relative;
+	padding: 10px;
+}
+
+.hovered::after {
+	content: "❌";
+	position: absolute;
+	width: 30px;
+	text-align: center;
+	transform: translate(-50%,-50%);
+}
+
+.button {
+	border-radius: 50%;
+	border: none;
+	width: 25px;
+	border: 1px solid gray;
+	background-color: white;
+}
+
+.remove-button {
+	visibility: hidden;
+	background-color: white;
+	border: none;
+}
+
+.todos-container:hover .hovered {
+	visibility: visible;
+}
